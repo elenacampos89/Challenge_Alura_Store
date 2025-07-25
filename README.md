@@ -8,53 +8,137 @@ Este proyecto es parte del Challenge de Análisis de Datos de Alura LATAM. El ob
 
 ---
 
-## 🧠 Objetivo del Proyecto
+## 🎯 Propósito del Análisis
 
-El análisis se enfoca en:
-- Evaluar los **ingresos**, **ventas**, **reseñas** y **envíos** de cada tienda.
-- Identificar patrones por **categoría de producto** y **ubicación geográfica**.
-- Determinar cuál tienda tiene **peor rendimiento**.
-- Generar visualizaciones que respalden la recomendación final.
+El análisis busca responder a la pregunta:
 
----
+> **¿Cuál de las cuatro tiendas tiene el menor rendimiento general y debería ser vendida?**
 
-## 🗂 Estructura del Código
-
-El análisis se organiza en bloques de código en un archivo `.ipynb` (notebook) con las siguientes secciones:
-
-1. **Importación de datos**
-2. **Análisis de facturación**: cálculo de ingresos totales por tienda
-3. **Análisis por categoría de productos vendidos**
-4. **Promedio de calificaciones por tienda**
-5. **Productos más y menos vendidos por tienda**
-6. **Costo de envío promedio**
-7. **Gráficos comparativos finales (barras, pie y dispersión)**
-8. **Distribución geográfica de ventas (lat/lon)**
-9. **Conclusión y recomendación de la tienda a vender**
+Para ello, se analizan las siguientes variables:
+- Ingresos por tienda
+- Categorías de productos más y menos vendidas
+- Calificaciones promedio de los clientes
+- Productos más y menos vendidos
+- Costos de envío promedio
+- Distribución geográfica de las ventas
 ---
 
 
-# 🧩 Archivos Incluidos
+## 📁 Estructura del Proyecto
 
-- tienda_1.csv, tienda_2.csv, tienda_3.csv, tienda_4.csv: Datos de ventas de cada tienda.
+```
+Challenge_Alura-store/
+│
+├──AluraStoreLatam_Challenge_Primero .ipynb        # Notebook principal con todo el análisis
+├── README.md                                      # Documentación general del proyecto
+└── data/                                          # Carpeta con los archivos de datos en CSV
+    ├── store1.csv
+    ├── store2.csv
+    ├── store3.csv     
+    └── store4.csv
+```
 
-- AluraStoreLatam.ipynb: Notebook con el análisis paso a paso.
+---
 
-- README.md: Este archivo explicativo.
+## 📊 Ejemplos de Gráficos e Insights Obtenidos
 
-# 📌 Recomendaciones
-Mantén todos los CSV en el mismo directorio que el .ipynb.
+### 1. Ingresos por Tienda
 
-Si ejecutas en Colab, asegúrate de cargar los archivos antes de correr el análisis.
+Se utilizó un gráfico de barras para comparar los ingresos totales de cada tienda.
 
-# ❓ Posibles Problemas
+**📌 Insight:** La Tienda 1 obtuvo los mayores ingresos, mientras que la Tienda 4 tuvo el rendimiento más bajo.
 
-- Error de columna no encontrada: Asegúrate de que los archivos tengan el nombre correcto y no contengan espacios adicionales.
-- Errores de visualización: Verifica que matplotlib esté correctamente instalado.
-- Problemas con encoding: Agrega encoding='utf-8' al pd.read_csv() si usas archivos en español con caracteres especiales.
+---
 
-# ✅ Resultado Esperado
-Al final del análisis, se determina qué tienda tiene el peor rendimiento global con base en métricas cuantitativas, visuales y geográficas, recomendando su venta con una justificación completa basada en datos.
+### 2. Calificaciones Promedio de Clientes
+
+Gráfico de barras que muestra la satisfacción del cliente por tienda.
+
+**📌 Insight:** La Tienda 2 fue la mejor calificada, y la Tienda 3 la peor.
+
+---
+
+### 3. Productos Más Vendidos
+
+Gráficos de barras horizontales por tienda para destacar los productos más vendidos.
+
+**📌 Insight:** Algunos productos se repiten entre tiendas, lo que sugiere una tendencia general de consumo.
+
+---
+
+### 4. Costos Promedio de Envío
+
+Gráfico de barras que muestra el costo medio de envío por tienda.
+
+**📌 Insight:** La Tienda 4 tiene el costo promedio de envío más elevado.
+
+---
+
+### 5. Análisis Geográfico
+
+Gráfico de dispersión de coordenadas geográficas (latitud y longitud).
+
+**📌 Insight:** La Tienda 1 y la Tienda 2 concentran más ventas en zonas densamente pobladas.
+
+---
+
+## ⚙️ Instrucciones para Ejecutar el Notebook
+
+### 1. Clonar el repositorio
+
+Abre una terminal y ejecuta:
+
+```bash
+git clone https://github.com/tu-usuario/alura-store-analysis.git
+cd alura-store-analysis
+```
+
+> 🔁 Reemplaza `tu-usuario` por tu nombre de usuario en GitHub.
+
+---
+
+### 2. Instalar las dependencias
+
+Asegúrate de tener Python 3 instalado. Luego ejecuta:
+
+```bash
+pip install pandas matplotlib
+```
+
+---
+
+### 3. Ejecutar el análisis
+
+Abre el archivo `alura_store.ipynb` con Jupyter Notebook:
+
+```bash
+jupyter notebook alura_store.ipynb
+```
+
+También puedes abrirlo directamente desde [Google Colab](https://colab.research.google.com/) para ejecutarlo en la nube.
+
+---
+
+## ✅ Recomendación Final
+
+Con base en los análisis realizados, se concluye que:
+
+- La **Tienda 4** fue la menos rentable  
+- Tiene los **costos de envío más altos**  
+- Obtuvo **malas calificaciones de clientes**  
+
+👉 Por lo tanto, se recomienda **vender la Tienda 4** para financiar el nuevo emprendimiento del Sr. Juan.
+
+---
+
+📘 Proyecto desarrollado como parte del programa **Oracle Next Education - Alura LATAM**
+
+
+
+
+
+
+
 
 # 👩‍💻 Autor
 Desarrollado por Luz Elena Campos Díaz como parte del reto de formación en análisis de datos con Python - Alura LATAM.
